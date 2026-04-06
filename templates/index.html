@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Lyrics & Debate</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎵 AI Creative Studio</h1>
+
+        <input type="text" id="topic" placeholder="Enter a topic (e.g. Space Travel)">
+
+
+        <div class="button-group">
+            <button onclick="askAI('lyrics')">Write Lyrics</button>
+            <button onclick="askAI('debate')">Start Debate</button>
+            <button onclick="clearOutput()" style="background: #555;">Clear</button>
+            <button onclick="downloadLyrics()" style="background: #2196F3;">Download .txt</button>
+            <div style="text-align: right;">
+                <button onclick="copyToClipboard()"
+                    style="background: #4caf50; font-size: 12px; padding: 5px 10px;">Copy Lyrics</button>
+                <button onclick="askAI('mood')" style="background: #9c27b0;">Get Mood Playlist</button>
+            </div>
+
+            <div id="song-info" style="display: none; text-align: center; margin-bottom: 20px;">
+                <img id="album-cover" src=""
+                    style="width: 250px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
+                <h2 id="song-display-title" style="color: #ffcc00; margin-top: 15px;"></h2>
+            </div>
+
+            <pre id="output"></pre>
+        </div>
+
+        <div id="loading" style="display:none;">AI is thinking...</div>
+        <div id="loader" style="display: none; color: #ffcc00; font-weight: bold; margin-bottom: 10px;">
+            🔍 Searching the Genius database...
+        </div>
+        <pre id="output"></pre>
+        <pre id="output"></pre>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
